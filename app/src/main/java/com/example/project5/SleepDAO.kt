@@ -18,4 +18,6 @@ interface SleepDAO {
 
     @Query("DELETE FROM article_table")
     fun deleteAll()
+    @Query("Select `hours slept` FROM article_table")
+    fun getHours(): List<String>
 }

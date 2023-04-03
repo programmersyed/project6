@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "article_table")
 data class SleepEntity(
-    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    @PrimaryKey(autoGenerate = true) val id: Int = 0,
     @ColumnInfo(name = "hours slept") val sleepNumber: String?,
     @ColumnInfo(name = "sleep rating") val sleepRate: String?,
     @ColumnInfo(name = "more sleep?") val moreSleep: String?,

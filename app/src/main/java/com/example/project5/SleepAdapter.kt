@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class SleepAdapter(private val sleepss: ArrayList<sleep>) : RecyclerView.Adapter<SleepAdapter.ViewHolder>()
+class SleepAdapter(private val sleepss: ArrayList<DisplaySleep>) : RecyclerView.Adapter<SleepAdapter.ViewHolder>()
 {
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nameTextView: TextView
@@ -30,9 +30,9 @@ class SleepAdapter(private val sleepss: ArrayList<sleep>) : RecyclerView.Adapter
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val wish = sleepss.get(position)
-        holder.nameTextView.text = wish.sleepRate
-        holder.priceTextView.text = wish.moreSleep
-        holder.urlTextView.text= wish.hours
+        holder.nameTextView.text = wish.sleepRate.toString()
+        holder.priceTextView.text = wish.moreSleep.toString()
+        holder.urlTextView.text= wish.sleepNumber.toString()
 
     }
 
